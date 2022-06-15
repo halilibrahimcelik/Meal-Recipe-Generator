@@ -31,22 +31,26 @@ function searchMealHandler(e) {
         if (data.meals === null) {
           ResultHeading.innerHTML = `<p>There are no search results. Try Again</p>`;
         } else {
-          mealElement.innerHTML = data.meals
-            .map((meal) => {
-              const { strMealThumb, strMeal, idMeal } = meal;
-              return `
-             <div class="meal">
-              <img src="${strMealThumb}" alt="${strMeal}" />
-              <div class="meal-info" data-mealID="${idMeal}">
-              <h3>${strMeal} </h3>
-              </div>
-             </div>
-              `;
-            })
-            .join("");
+          gettingDishes(data);
         }
       });
   } else {
     alert("Please enter a search term");
   }
+}
+
+function gettingDishes(data) {
+  mealElement.innerHTML = data.meals
+    .map((meal) => {
+      const { strMealThumb, strMeal, idMeal } = meal;
+      return `
+     <div class="meal">
+      <img src="${strMealThumb}" alt="${strMeal}" />
+      <div class="meal-info" data-mealID="${idMeal}">
+      <h3>${strMeal} </h3>
+      </div>
+     </div>
+      `;
+    })
+    .join("");
 }

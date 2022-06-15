@@ -64,6 +64,42 @@ input[type=text] {
   border-bottom-right-radius: 4px;
 }
 
+.meals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-top: 1rem;
+}
+.meals .meal {
+  cursor: pointer;
+  position: relative;
+  height: 18rem;
+  width: 18rem;
+  text-align: center;
+}
+.meals .meal img {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #fff;
+  border-radius: 2px;
+}
+.meals .meal .meal-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+}
+.meals .meal .meal-info:hover {
+  opacity: 1;
+}
+
 @media (max-width: 500px) {
   input[type=text] {
     width: 100%;
