@@ -8,6 +8,7 @@ console.log(submitBtn);
 //Event Listeners
 submitBtn.addEventListener("submit", searchMealHandler);
 mealElement.addEventListener("click", searchDishesHandler);
+randomBtn.addEventListener("click", randomMealHandler);
 
 //Functions
 function searchMealHandler(e) {
@@ -115,4 +116,19 @@ ${ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("")}
  </div>
   `;
   console.log(ingredients);
+}
+
+//getting random meals from  the API
+function randomMealHandler() {
+  //we first need to clear the existing container
+  mealElement.innerHTML = ``;
+  ResultHeading.innerHTML = ``;
+  singleMealElement.innerHTML = ``;
+
+  fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+    .then((response) => response.json())
+    .then((data) => {
+      const meal = data.meals[0];
+      addMealFeaturesToDOM(meal);
+    });
 }
