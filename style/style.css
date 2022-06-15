@@ -100,6 +100,40 @@ input[type=text] {
   opacity: 1;
 }
 
+.singleMeal {
+  margin: 3rem auto;
+  width: 70%;
+  font-size: 1.2rem;
+}
+.singleMeal img {
+  width: 30rem;
+  margin: 2rem;
+  border: 4px solid #fff;
+  border-radius: 2px;
+}
+.singleMeal .single-meal-info {
+  margin: 2rem;
+  padding: 1rem;
+}
+.singleMeal p {
+  margin: 0;
+  letter-spacing: 0.2rem;
+  line-height: 1.7;
+}
+.singleMeal ul {
+  list-style: none;
+}
+.singleMeal ul li {
+  border: 1px solid #ededed;
+  background-color: #ededed;
+  color: #330000;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0.5rem;
+  font-weight: bold;
+  margin: 1px 5px;
+}
+
 @media (max-width: 500px) {
   input[type=text] {
     width: 100%;

@@ -101,8 +101,8 @@ function addMealFeaturesToDOM(meal) {
   <h2>${strMeal} </h2>
   <img src="${strMealThumb}"  alt="${strMeal} "/>
   <div class="single-meal-info">
-  ${strCategory ? `<p>${strCategory}</p>` : ""}
-  ${strArea ? `<p>${strArea}</p>` : ""}
+  ${strCategory ? `<h2>${strCategory}</h2>` : ""}
+  ${strArea ? `<h3>${strArea}</h3>` : ""}
   </div>
   <div class="main">
   <p>${strInstructions}</p>
