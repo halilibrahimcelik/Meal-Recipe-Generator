@@ -134,7 +134,29 @@ input[type=text] {
   margin: 1px 5px;
 }
 
+@media (max-width: 800px) {
+  .meals {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .meals .meal {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 700px) {
+  .meals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 500px) {
+  .meals {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .meals .meal {
+    width: 30rem;
+    height: 30rem;
+  }
+
   input[type=text] {
     width: 100%;
   }
